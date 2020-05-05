@@ -3,6 +3,11 @@ import HeaderImg from './HeaderImg'
 
 function Header() {
 
+    return (
+        <div className="header">
+            <HeaderImg />
+        </div>
+    )
 }
 
 

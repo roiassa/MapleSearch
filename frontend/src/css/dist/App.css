@@ -6,6 +6,7 @@
 
 html, body {
   height: 100%;
+  background-color: #4DD0E1;
 }
 
 body {
@@ -34,6 +35,27 @@ a:hover, span:hover, button:hover {
 
 .header {
   height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .logo-container .title {
+  color: #FF7043;
+  font-size: 50px;
+  z-index: 1;
+  width: 7%;
+  text-shadow: 3px 3px 5px #969696;
+  margin-right: 200px;
+}
+.header .logo-container img {
+  width: 150px;
+  height: 150px;
 }
 
 /*# sourceMappingURL=App.css.map */
