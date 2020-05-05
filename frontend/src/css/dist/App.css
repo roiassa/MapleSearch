@@ -4,9 +4,13 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
-  background-color: #4DD0E1;
+  width: 100%;
+  background-color: #4898d6;
+  position: fixed;
+  z-index: -6;
 }
 
 body {
@@ -21,16 +25,47 @@ body {
   text-decoration: none;
 }
 
-h1:hover, h2:hover, p:hover {
+h1:hover,
+h2:hover,
+p:hover {
   cursor: default;
 }
 
-a, span, button {
+a,
+span,
+button {
   text-decoration: none !important;
   outline: none !important;
 }
-a:hover, span:hover, button:hover {
+a:hover,
+span:hover,
+button:hover {
   text-decoration: none !important;
+}
+
+.background-container {
+  position: fixed;
+  z-index: -1;
+  display: flex;
+  background-repeat: repeat-x;
+  animation: animate 15s infinite linear;
+  width: 200%;
+  height: 500px;
+  top: 440px;
+}
+@keyframes animate {
+  0% {
+    right: -884px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+  top: -130px;
+  right: 20px;
 }
 
 .header {
