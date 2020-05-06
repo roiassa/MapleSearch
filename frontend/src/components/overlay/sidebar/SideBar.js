@@ -3,6 +3,7 @@ import Warrior from './mapleJobs/Warrior'
 import Magician from './mapleJobs/Magician'
 import Thief from './mapleJobs/Thief'
 import Bowman from './mapleJobs/Bowman'
+import Pirate from './mapleJobs/Pirate'
 
 
 function SideBar() {
@@ -12,6 +13,7 @@ function SideBar() {
             <Magician />
             <Thief />
             <Bowman />
+            <Pirate />
         </nav>
     )
 }
