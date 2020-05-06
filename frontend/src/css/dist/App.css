@@ -51,7 +51,7 @@ button:hover {
   animation: animate 15s infinite linear;
   width: 200%;
   height: 500px;
-  top: 440px;
+  top: 470px;
 }
 @keyframes animate {
   0% {
