@@ -101,7 +101,7 @@ button:hover {
   height: 100%;
   width: 3%;
   transition: all ease-in-out 0.5s;
-  z-index: 1;
+  z-index: 5;
 }
 .side-bar:hover {
   width: 10%;
@@ -112,16 +112,17 @@ button:hover {
 .side-bar .link-div {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .side-bar .link-div:hover {
   background-color: #FB8C00;
   cursor: pointer;
 }
 .side-bar .link-div:hover .icon-home, .side-bar .link-div:hover .icon-user {
-  color: #F57C00;
+  color: #FFB74D;
 }
 .side-bar .link-div:hover .nav-link {
-  color: #F57C00;
+  color: #FFB74D;
 }
 .side-bar .icon-home, .side-bar .icon-user {
   font-size: 20px;
@@ -132,9 +133,6 @@ button:hover {
 }
 .side-bar .icon-home:hover, .side-bar .icon-user:hover {
   cursor: pointer;
-}
-.side-bar .icon-user {
-  margin-left: 14px;
 }
 .side-bar .nav-link {
   color: white;
