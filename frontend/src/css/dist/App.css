@@ -93,4 +93,54 @@ button:hover {
   height: 150px;
 }
 
+.side-bar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: #F4511E;
+  height: 100%;
+  width: 3%;
+  transition: all ease-in-out 0.5s;
+  z-index: 1;
+}
+.side-bar:hover {
+  width: 10%;
+}
+.side-bar:hover .nav-link {
+  display: block;
+}
+.side-bar .link-div {
+  display: flex;
+  flex-direction: row;
+}
+.side-bar .link-div:hover {
+  background-color: #FB8C00;
+  cursor: pointer;
+}
+.side-bar .link-div:hover .icon-home, .side-bar .link-div:hover .icon-user {
+  color: #F57C00;
+}
+.side-bar .link-div:hover .nav-link {
+  color: #F57C00;
+}
+.side-bar .icon-home, .side-bar .icon-user {
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.side-bar .icon-home:hover, .side-bar .icon-user:hover {
+  cursor: pointer;
+}
+.side-bar .icon-user {
+  margin-left: 14px;
+}
+.side-bar .nav-link {
+  color: white;
+  display: none;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
 /*# sourceMappingURL=App.css.map */
