@@ -6,7 +6,7 @@ import { faDollarSign } from '@fortawesome/free-solid-svg-icons'
 function Thief() {
     return (
         <Link to="/thief" ><div className="link-div">
-            <FontAwesomeIcon icon={faDollarSign} className="icon-home" />
+            <FontAwesomeIcon icon={faDollarSign} className="sidebar-icon" />
             <span className="nav-link">Thief</span>
         </div>
         </Link>

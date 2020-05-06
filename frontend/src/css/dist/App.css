@@ -102,11 +102,12 @@ button:hover {
   width: 3%;
   transition: all ease-in-out 0.5s;
   z-index: 5;
+  border-radius: 30px 30px 30px 30px;
 }
 .side-bar:hover {
   width: 10%;
 }
-.side-bar:hover .nav-link {
+.side-bar:hover .nav-link, .side-bar:hover .nav-link2 {
   display: block;
 }
 .side-bar .link-div {
@@ -118,27 +119,24 @@ button:hover {
   background-color: #FB8C00;
   cursor: pointer;
 }
-.side-bar .link-div:hover .icon-home, .side-bar .link-div:hover .icon-user {
-  color: #FFB74D;
-}
-.side-bar .link-div:hover .nav-link {
-  color: #FFB74D;
-}
-.side-bar .icon-home, .side-bar .icon-user {
+.side-bar .sidebar-icon {
   font-size: 20px;
   color: white;
   margin-top: 10px;
   margin-left: 10px;
   margin-bottom: 15px;
 }
-.side-bar .icon-home:hover, .side-bar .icon-user:hover {
+.side-bar .sidebar-icon:hover {
   cursor: pointer;
 }
-.side-bar .nav-link {
+.side-bar .nav-link, .side-bar .nav-link2 {
   color: white;
   display: none;
-  margin-left: 10px;
+  margin-left: 8px;
   margin-bottom: 5px;
+}
+.side-bar .nav-link2 {
+  margin-left: 16px;
 }
 
 /*# sourceMappingURL=App.css.map */

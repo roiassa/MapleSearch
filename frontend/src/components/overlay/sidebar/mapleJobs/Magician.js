@@ -6,8 +6,8 @@ import { faMagic } from '@fortawesome/free-solid-svg-icons'
 function Magician() {
     return (
         <Link to="/magician" ><div className="link-div">
-                <FontAwesomeIcon icon={faMagic} className="icon-user" />
-                <span className="nav-link">Magician</span>
+                <FontAwesomeIcon icon={faMagic} className="sidebar-icon" />
+                <span className="nav-link2">Magician</span>
             </div>
         </Link>
     )

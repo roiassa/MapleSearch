@@ -6,8 +6,8 @@ import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons'
 function Pirate() {
     return (
         <Link to="/pirate" ><div className="link-div">
-                <FontAwesomeIcon icon={faSkullCrossbones} className="icon-user" />
-                <span className="nav-link">Pirate</span>
+                <FontAwesomeIcon icon={faSkullCrossbones} className="sidebar-icon" />
+                <span className="nav-link2">Pirate</span>
             </div>
         </Link>
     )

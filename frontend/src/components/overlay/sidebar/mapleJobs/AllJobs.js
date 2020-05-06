@@ -12,8 +12,8 @@ function AllJobs() {
     return (
         <Accordion>
             <Card style={{backgroundColor: '#F4511E', }}>
-                <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey="0" style={{color: 'white'}}>
+                <Card.Header style={{padding: '0'}}>
+                    <Accordion.Toggle as={Button} variant="link" eventKey="0" style={{color: 'white', width: '100%', padding: '0'}}>
                         Jobs
                     </Accordion.Toggle>
                 </Card.Header>
