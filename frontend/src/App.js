@@ -1,7 +1,8 @@
 import React from 'react';
+import BackgroundImg from './components/overlay/BackgroundImg'
 import Header from './components/overlay/header/Header'
 import SideBar from './components/overlay/sidebar/SideBar'
-import BackgroundImg from './components/overlay/BackgroundImg'
+import Pages from './components/pages/Pages'
 import './css/dist/App.css'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,6 +16,7 @@ function App() {
         <BackgroundImg />
         <Header />
         <SideBar />
+        <Pages />
       </React.Fragment>
     </Router>
   );
