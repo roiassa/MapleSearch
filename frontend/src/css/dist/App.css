@@ -151,15 +151,16 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #455A64;
+  background-color: #455a64;
   height: 90%;
   width: 75%;
+  border-radius: 30px 30px 30px 30px;
 }
 .wrapper .pages-window .job-title {
   margin-top: 30px;
   font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
   font-weight: 700;
-  color: #F6E27F;
+  color: #f6e27f;
   letter-spacing: 2px;
 }
 .wrapper .pages-window img {
