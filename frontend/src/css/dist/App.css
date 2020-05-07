@@ -71,7 +71,7 @@ button:hover {
 }
 
 .header {
-  height: 22%;
+  height: 24%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,8 +91,8 @@ button:hover {
   margin-right: 200px;
 }
 .header .logo-container img {
-  width: 150px;
-  height: 150px;
+  width: 50%;
+  height: 50%;
 }
 
 .side-bar {
