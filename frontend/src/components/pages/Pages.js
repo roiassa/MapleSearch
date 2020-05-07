@@ -1,4 +1,5 @@
 import React from 'react'
+import HomePage from './HomePage'
 import WarriorPage from './WarriorPage'
 import MagicianPage from './MagicianPage'
 import ThiefPage from './ThiefPage'
@@ -17,6 +18,7 @@ function Pages() {
                     <img src={corners} className="right-bottom"></img>
                 </div> */}
             <div className="pages-window">
+                <Route exact path="/" component={HomePage} />
                 <Route exact path="/warrior" component={WarriorPage}></Route>
                 <Route exact path="/magician" component={MagicianPage}></Route>
                 <Route exact path="/thief" component={ThiefPage}></Route>

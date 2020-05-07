@@ -158,6 +158,7 @@ button:hover {
 }
 .wrapper .pages-window .title {
   margin-top: 30px;
+  margin-bottom: 50px;
   font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
   font-weight: 700;
   color: #f6e27f;
@@ -175,6 +176,14 @@ button:hover {
   color: white;
   font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
   font-weight: bold;
+}
+.wrapper .pages-window .balrog-div {
+  width: 30%;
+  height: 40%;
+}
+.wrapper .pages-window .balrog-div img {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=App.css.map */
