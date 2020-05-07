@@ -1,11 +1,14 @@
 import React from 'react';
 import HeaderImg from './HeaderImg'
+import { Link } from 'react-router-dom'
 
 function Header() {
 
     return (
         <div className="header">
-            <HeaderImg />
+            <Link to="/">
+                <HeaderImg />
+            </Link>
         </div>
     )
 }
