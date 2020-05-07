@@ -5,9 +5,9 @@ import MagicianImg from '../../assets/img-src/388px-Magician_Female.png'
 function MagicianPage() {
     return (
         <React.Fragment>
-        <h1 className="job-title">Magician</h1>
+        <h1 className="title">Magician</h1>
         <img src={MagicianImg} alt="Magician"></img>
-        <div className="job-overview">
+        <div className="overview">
             <p>The Magician may look fragile, but this powerful magic-user can obliterate enemies from afar with devastating spells.
                  With a large amount of mana, the Magician can cast elemental or supportive skills from a distance while characters stronger in melee combat engage monsters up close.
                   The Magician is perfect for Party Quests, Boss Fights, hunting and other activities that require elemental power.

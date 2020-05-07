@@ -4,9 +4,9 @@ import WarriorImg from '../../assets/img-src/kisspng-maplestory-youtube-warrior-
 function WarriorPage() {
     return (
         <React.Fragment>
-            <h1 className="job-title">Warrior</h1>
+            <h1 className="title">Warrior</h1>
             <img src={WarriorImg} alt="Warrior"></img>
-            <div className="job-overview">
+            <div className="overview">
                 <p>The Warrior is a solid, well-rounded character perfect for players new to MapleStory.
                 This character excels at defense, with large amounts of health and access to powerful suits of armor.
                 These strengths help keep the Warrior protected when engaged in close-quarters combat against hordes of monsters.

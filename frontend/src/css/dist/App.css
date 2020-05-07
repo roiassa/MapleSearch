@@ -156,7 +156,7 @@ button:hover {
   width: 75%;
   border-radius: 30px 30px 30px 30px;
 }
-.wrapper .pages-window .job-title {
+.wrapper .pages-window .title {
   margin-top: 30px;
   font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
   font-weight: 700;
@@ -168,7 +168,7 @@ button:hover {
   margin-bottom: 30px;
   height: 30%;
 }
-.wrapper .pages-window .job-overview {
+.wrapper .pages-window .overview {
   display: flex;
   width: 50%;
   line-height: 30px;

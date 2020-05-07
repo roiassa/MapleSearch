@@ -4,9 +4,9 @@ import BowmanImg from '../../assets/img-src/402px-Artwork_Bowman_1M.png'
 function BowmanPage() {
     return (
              <React.Fragment>
-            <h1 className="job-title">Bowman</h1>
+            <h1 className="title">Bowman</h1>
             <img src={BowmanImg} alt="Bowman"></img>
-            <div className="job-overview">
+            <div className="overview">
                 <p>Bowmen are nimble, long-range snipers. They have a variety of skills to help attack, evade danger,
                      buff their damage, and launch arrows at groups of monsters. Bowmen can attack an enemy horde with arrow barrages,
                       but are strongest attacking single targets from afar, as their long range is balanced by modest HP.
