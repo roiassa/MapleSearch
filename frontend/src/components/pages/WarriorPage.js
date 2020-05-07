@@ -5,7 +5,7 @@ function WarriorPage() {
     return (
         <React.Fragment>
             <h1 className="job-title">Warrior</h1>
-            <img src={WarriorImg}></img>
+            <img src={WarriorImg} alt="Warrior"></img>
             <div className="job-overview">
                 <p>The Warrior is a solid, well-rounded character perfect for players new to MapleStory.
                 This character excels at defense, with large amounts of health and access to powerful suits of armor.
