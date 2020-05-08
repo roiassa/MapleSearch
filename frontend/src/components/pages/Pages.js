@@ -1,12 +1,8 @@
 import React from 'react'
 import HomePage from './HomePage'
-import WarriorPage from './WarriorPage'
-import MagicianPage from './MagicianPage'
-import ThiefPage from './ThiefPage'
-import BowmanPage from './BowmanPage'
-import PiratePage from './PiratePage'
 // import corners from '../../assets/img-src/kisspng-borders-and-frames-gold-clip-art-gold-corner-5ab9582ea29f60.5564116915220961746661.png'
 import { BrowserRouter as Router, Route, } from 'react-router-dom'
+import data from './pagesData'
 
 function Pages() {
     return (
@@ -18,12 +14,16 @@ function Pages() {
                     <img src={corners} className="right-bottom"></img>
                 </div> */}
             <div className="pages-window">
-                <Route exact path="/" component={HomePage} />
-                <Route exact path="/warrior" component={WarriorPage}></Route>
-                <Route exact path="/magician" component={MagicianPage}></Route>
-                <Route exact path="/thief" component={ThiefPage}></Route>
-                <Route exact path="/bowman" component={BowmanPage}></Route>
-                <Route exact path="/pirate" component={PiratePage}></Route>
+                 <Route exact path="/" component={HomePage} />
+                {data.map((page, index) => {
+                    return <Route exact path={page.path} key={index}>
+                        <React.Fragment>
+                            <h1 className="title">{page.title}</h1>
+                            <img src={page.img} alt='):'></img>
+                            <p className="overview">{page.overview}</p>
+                        </React.Fragment>
+                    </Route>
+                })}
             </div>
         </div>
     )
