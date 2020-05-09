@@ -30,14 +30,15 @@ const upload = multer({
 });
 
 
-router.get('/jobs', function(req, res){
+router.get('/jobs', function(req, res, next){
     Job.find({}).then(function(jobs){
         res.send(jobs)
     })
+    .catch(next)
 })
 
 
-router.post('/jobs', upload.single('jobImage'), function(req, res) {
+router.post('/jobs', upload.single('jobImage'), function(req, res, next) {
     console.log(req.file.path)
     Job.create({
         path: req.body.path,
@@ -47,6 +48,7 @@ router.post('/jobs', upload.single('jobImage'), function(req, res) {
     }).then(function(job){
         res.send(job)
     })
+    .catch(next)
 })
 
 
