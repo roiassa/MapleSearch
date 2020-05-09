@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const JobSchema = new Schema({
     path: String,
     title: String,
-    image: Buffer,
+    image: String,
     overview: String
 });
 
