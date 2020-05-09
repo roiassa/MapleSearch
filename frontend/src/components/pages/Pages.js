@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import axios from 'axios'
+import jobGet from '../../apicalls/jobsAPI'
 import HomePage from './HomePage'
 // import corners from '../../assets/img-src/kisspng-borders-and-frames-gold-clip-art-gold-corner-5ab9582ea29f60.5564116915220961746661.png'
 import { BrowserRouter as Router, Route, } from 'react-router-dom'
@@ -10,17 +10,7 @@ function Pages() {
     const [jobPages, setJobPages] = useState([])
 
     useEffect(() => {
-        const url = '/api/jobs'
-        axios.get(url)
-        .then(res => {
-            setJobPages(res.data)
-            
-        })
-        .catch(err => {
-            if(err.reponse.status === 404) {
-                console.log(err)
-            }
-        })
+        jobGet(setJobPages)
     }, [])
 
     return (
