@@ -18,7 +18,7 @@ function HomePage() {
                 </p>
             </div>
             <div className="balrog-div" onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)}>
-                {isShown ? <Link to="/"><img src={SlimeImg} alt="Slime"></img> </Link> : <img src={BalrogImg} alt="Balrog" ></img>}
+                {isShown ? <Link to="/search"><img src={SlimeImg} alt="Slime"></img> </Link> : <img src={BalrogImg} alt="Balrog" ></img>}
             </div>
         </React.Fragment>
     )
