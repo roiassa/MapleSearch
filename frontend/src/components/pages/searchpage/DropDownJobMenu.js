@@ -2,16 +2,12 @@ import React from 'react'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import dropDownJobs from '../../../helpers/dropDownJobs'
-import axios from 'axios'
+import searchJobsApi from '../../../helpers/apicalls/searchJobsApi'
 
 function DropDown(props) {
 
     const handleSelect = (value) => {
-        axios.get(`https://maplestory.io/api/gms/213/item/list?jobFilter=${value}`)
-            .then(res => {
-                console.log(res.data)
-                props.setItems(res.data)
-            })
+        searchJobsApi(props.setItems, value)
     }
 
     return (
