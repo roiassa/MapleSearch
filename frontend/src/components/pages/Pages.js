@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import jobGet from '../../apicalls/jobsAPI'
 import HomePage from './HomePage'
 import JobPages from './JobPages'
+import SearchPage from './searchpage/SearchPage'
 import { BrowserRouter as Router, Route, } from 'react-router-dom'
 
 
@@ -20,6 +21,7 @@ function Pages() {
                 <JobPages
                     jobPagesList={jobPagesList}
                 />
+                <Route exact path="/search" component={SearchPage} />
             </div>
         </div>
     )
