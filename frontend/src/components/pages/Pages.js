@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import jobGet from '../../helpers/apicalls/jobsAPI'
+import jobGet from '../../helpers/apicalls/jobsApi'
 import HomePage from './HomePage'
 import JobPages from './JobPages'
 import SearchPage from './searchpage/SearchPage'
