@@ -2,39 +2,12 @@ import React, { useState, useEffect } from 'react'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import axios from 'axios'
+import dropDownJobs from '../../../helpers/dropDownJobs'
 
 function SearchPage() {
 
     const [items, setItems] = useState([])
 
-    const [dropDownJobs, setDropDownJobs] = useState([
-        {
-            name: "Begginer",
-            value: "0"
-        },
-        {
-            name: "Warrior",
-            value: "1"
-        },
-        {
-            name: "Magician",
-            value: "2"
-        },
-        {
-            name: "Thief",
-            value: "8"
-        },
-        {
-            name: "Bowman",
-            value: "4"
-        },
-        {
-            name: "Pirate",
-            value: "16"
-        },
-    ])
-
-    
     const handleSelect = (value) => {
         axios.get(`https://maplestory.io/api/gms/213/item/list?jobFilter=${value}`)
             .then(res => {
