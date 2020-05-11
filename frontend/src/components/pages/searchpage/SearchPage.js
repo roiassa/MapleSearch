@@ -1,33 +1,17 @@
 import React, { useState, useEffect } from 'react'
-import DropdownButton from 'react-bootstrap/DropdownButton'
-import Dropdown from 'react-bootstrap/Dropdown'
-import axios from 'axios'
-import dropDownJobs from '../../../helpers/dropDownJobs'
+import DropdownJobMenu from './DropDownJobMenu'
+
 
 function SearchPage() {
 
     const [items, setItems] = useState([])
 
-    const handleSelect = (value) => {
-        axios.get(`https://maplestory.io/api/gms/213/item/list?jobFilter=${value}`)
-            .then(res => {
-                console.log(res.data)
-                setItems(res.data)
-            })
-    }
 
     return (
         <React.Fragment>
-            <>
-                <>
-                    <DropdownButton title='Choose a job' onSelect={(eventKey) => { handleSelect(eventKey) }}>
-                        {dropDownJobs.map((job, index) => {
-                            return <Dropdown.Item eventKey={job.value} key={index}>{job.name}</Dropdown.Item>
-                        })}
-
-                    </DropdownButton>{' '}
-                </>
-            </>
+            <DropdownJobMenu 
+            setItems={setItems}
+            />
             <div>
                 {items.map((item, index) => {
                     return <React.Fragment key={index}>
