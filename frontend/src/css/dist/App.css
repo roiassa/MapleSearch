@@ -191,16 +191,49 @@ button:hover {
   padding: 50px;
   border-bottom: 7px solid white;
 }
-.wrapper .pages-window .item {
+.wrapper .pages-window .search-options .cash-btn-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.wrapper .pages-window .search-options .cash-btn-div .no-cash, .wrapper .pages-window .search-options .cash-btn-div .yes-cash {
+  border: none;
+  color: white;
+  background-color: #007bff;
+  border-color: #0062cc;
+  border-radius: 50px 50px 50px 50px;
+  padding: 10px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.wrapper .pages-window .search-options .cash-btn-div .yes-cash {
+  background-color: #88d18a;
+}
+.wrapper .pages-window .items-list::-webkit-scrollbar {
+  width: 1em;
+}
+.wrapper .pages-window .items-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.wrapper .pages-window .items-list::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+.wrapper .pages-window .items-list {
+  width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  border-radius: 0px 0px 20px 20px;
+}
+.wrapper .pages-window .items-list .item {
   padding-top: 20px;
-  background-color: #78909C;
+  background-color: #78909c;
   display: flex;
   flex-direction: column;
-  border-bottom: 3px solid #49516F;
+  border-bottom: 3px solid #49516f;
   height: 250px;
   width: 100%;
 }
-.wrapper .pages-window .item .item-name {
+.wrapper .pages-window .items-list .item .item-name {
   color: #f6e27f;
   display: flex;
   justify-content: center;
@@ -211,15 +244,15 @@ button:hover {
   font-weight: 700;
   font-size: 30px;
 }
-.wrapper .pages-window .item .item-details {
+.wrapper .pages-window .items-list .item .item-details {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #49516F;
+  color: #49516f;
   font-weight: bold;
   margin-left: 200px;
 }
-.wrapper .pages-window .item .item-img {
+.wrapper .pages-window .items-list .item .item-img {
   position: relative;
   display: flex;
   align-items: center;
@@ -230,7 +263,7 @@ button:hover {
   width: 200px;
   height: 745px;
 }
-.wrapper .pages-window .item .item-img img {
+.wrapper .pages-window .items-list .item .item-img img {
   height: 25%;
 }
 
