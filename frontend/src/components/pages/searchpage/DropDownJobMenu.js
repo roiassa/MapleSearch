@@ -16,16 +16,11 @@ function DropDown(props) {
 
     return (
         <React.Fragment>
-            <>
-                <>
-                    <DropdownButton title='Choose a job' onSelect={(eventKey) => { handleSelect(eventKey) }}>
-                        {dropDownJobs.map((job, index) => {
-                            return <Dropdown.Item eventKey={job.value} key={index}>{job.name}</Dropdown.Item>
-                        })}
-
-                    </DropdownButton>{' '}
-                </>
-            </>
+                <DropdownButton title='Choose a job' onSelect={(eventKey) => { handleSelect(eventKey) }}>
+                    {dropDownJobs.map((job, index) => {
+                        return <Dropdown.Item eventKey={job.value} key={index}>{job.name}</Dropdown.Item>
+                    })}
+                </DropdownButton>{' '}
         </React.Fragment>
     )
 }

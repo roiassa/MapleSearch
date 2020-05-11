@@ -10,11 +10,13 @@ function SearchPage() {
 
     return (
         <React.Fragment>
-            <DropdownJobMenu 
-            setItems={setItems}
-            />
-            <JobItems 
-            items={items}
+            <div className='search-options'>
+                <DropdownJobMenu
+                    setItems={setItems}
+                />
+            </div>
+            <JobItems
+                items={items}
             />
         </React.Fragment>
     )
