@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function isCashButton(props) {
+function IsCashButton(props) {
+
+    const [btnColor, setBtnColor] = useState(false)
 
     const handleClick = () => {
         props.setIsCash(!props.isCash)
-    
+        setBtnColor(!btnColor)
     }
 
+    let colorOfButton = btnColor ? "yes-cash" : "no-cash"
+
     return (
-        <button className='cash-btn' onClick={handleClick}>Cash Items</button>
+        <div className="cash-btn-div">
+            <button className={colorOfButton} onClick={handleClick}>Cash Items</button>
+        </div>
     )
 }
 
-export default isCashButton
+export default IsCashButton
