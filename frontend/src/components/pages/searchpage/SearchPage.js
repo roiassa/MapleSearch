@@ -8,7 +8,7 @@ function SearchPage() {
 
     const [items, setItems] = useState([])
     const [isCash, setIsCash] = useState(false)
-    
+
     return (
         <React.Fragment>
             <div className='search-options'>
@@ -16,14 +16,16 @@ function SearchPage() {
                     setItems={setItems}
                     isCash={isCash}
                 />
-                <IsCashButton 
-                isCash={isCash}
-                setIsCash={setIsCash}
+                <IsCashButton
+                    isCash={isCash}
+                    setIsCash={setIsCash}
                 />
             </div>
-            <JobItems
-                items={items}
-            />
+            <div className='items-list'>
+                <JobItems
+                    items={items}
+                />
+            </div>
         </React.Fragment>
     )
 }
