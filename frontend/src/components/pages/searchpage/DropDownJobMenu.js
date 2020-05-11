@@ -5,18 +5,20 @@ import dropDownJobs from '../../../helpers/dropDownJobs'
 import searchJobsApi from '../../../helpers/apicalls/searchJobsApi'
 
 function DropDown(props) {
+    
 
     const handleSelect = (value) => {
-        searchJobsApi(props.setItems, value)
+        searchJobsApi(props.setItems, value, props.isCash)
     }
-
+    
     return (
         <React.Fragment>
-                <DropdownButton title='Choose a job' onSelect={(eventKey) => { handleSelect(eventKey) }}>
-                    {dropDownJobs.map((job, index) => {
-                        return <Dropdown.Item eventKey={job.value} key={index}>{job.name}</Dropdown.Item>
-                    })}
-                </DropdownButton>{' '}
+            <DropdownButton title='Choose a job' onSelect={(eventKey) => { handleSelect(eventKey) }}>
+                {dropDownJobs.map((job, index) => {
+                    return <Dropdown.Item eventKey={job.value} key={index}>{job.name}</Dropdown.Item>
+                })}
+            </DropdownButton>{' '}
+            
         </React.Fragment>
     )
 }
