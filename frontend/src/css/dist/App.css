@@ -215,7 +215,17 @@ button:hover {
   position: relative;
   z-index: 5;
   height: 100%;
-  background-color: #F4511E;
+  background-color: #f4511e;
+}
+.wrapper .pages-window .loading-page span {
+  color: white;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin-right: 50px;
+}
+.wrapper .pages-window .loading-page img {
+  margin-left: 50px;
 }
 .wrapper .pages-window .items-list::-webkit-scrollbar {
   width: 10px;
@@ -232,7 +242,7 @@ button:hover {
 }
 .wrapper .pages-window .items-list .item {
   padding-top: 20px;
-  background-color: #F4511E;
+  background-color: #f4511e;
   display: flex;
   flex-direction: column;
   border-bottom: 3px solid #49516f;
