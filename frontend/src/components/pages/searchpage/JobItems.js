@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState} from 'react'
+
 
 function JobItems(props) {
+
     return (
         <React.Fragment>
             {props.items.map((item, index) => {

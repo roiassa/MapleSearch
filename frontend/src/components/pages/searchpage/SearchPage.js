@@ -3,6 +3,7 @@ import DropdownJobMenu from './DropDownJobMenu'
 import JobItems from './JobItems'
 import IsCashButton from './IsCashButton'
 import LoadingPage from '../LoadingPage'
+import Pagination from './Pagination'
 
 
 function SearchPage() {
@@ -10,6 +11,16 @@ function SearchPage() {
     const [items, setItems] = useState([])
     const [isCash, setIsCash] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
+    const [currentPage, setCurrentPage] = useState(1)
+    const [itemsPerPage] = useState(10)
+
+    //Get current items
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage
+    const currentItems = items.slice(indexOfFirstItem, indexOfLastItem)
+
+    //Change page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
     return (
         <React.Fragment>
@@ -25,14 +36,27 @@ function SearchPage() {
                     setIsCash={setIsCash}
                 />
             </div>
+
             <div className='items-list'>
-                <LoadingPage
+                {isLoading ? <LoadingPage
                     isLoading={isLoading}
                     setIsLoading={setIsLoading}
                 />
-                <JobItems
-                    items={items}
-                />
+                    :
+                    <React.Fragment>
+                        <JobItems
+                            items={currentItems}
+                            itemsPerPage={itemsPerPage}
+                        />
+                        <Pagination
+                            itemsPerPage={itemsPerPage}
+                            totalItems={items.length}
+                            paginate={paginate}
+                        />
+                    </React.Fragment>
+                }
+
+
             </div>
         </React.Fragment>
     )
