@@ -14,14 +14,6 @@ function SearchPage() {
     const [currentPage, setCurrentPage] = useState(1)
     const [itemsPerPage] = useState(10)
 
-    //Get current items
-    const indexOfLastItem = currentPage * itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemsPerPage
-    const currentItems = items.slice(indexOfFirstItem, indexOfLastItem)
-
-    //Change page
-    const paginate = (pageNumber) => setCurrentPage(pageNumber)
-
     return (
         <React.Fragment>
             <div className='search-options'>
@@ -45,18 +37,18 @@ function SearchPage() {
                     :
                     <React.Fragment>
                         <JobItems
-                            items={currentItems}
+                            items={items}
                             itemsPerPage={itemsPerPage}
+                            currentPage={currentPage}
                         />
                         <Pagination
                             itemsPerPage={itemsPerPage}
                             totalItems={items.length}
-                            paginate={paginate}
+                            setCurrentPage={setCurrentPage}
+                            setIsLoading={setIsLoading}
                         />
                     </React.Fragment>
                 }
-
-
             </div>
         </React.Fragment>
     )
