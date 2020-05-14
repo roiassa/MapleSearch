@@ -13,6 +13,7 @@ function SearchPage() {
     const [isLoading, setIsLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
     const [itemsPerPage] = useState(10)
+    const [activeSearch, setActiveSearch] = useState(false)
 
     return (
         <React.Fragment>
@@ -22,6 +23,7 @@ function SearchPage() {
                     isCash={isCash}
                     isLoading={isLoading}
                     setIsLoading={setIsLoading}
+                    setActiveSearch={setActiveSearch}
                 />
                 <IsCashButton
                     isCash={isCash}
@@ -41,12 +43,14 @@ function SearchPage() {
                             itemsPerPage={itemsPerPage}
                             currentPage={currentPage}
                         />
-                        <Pagination
+                        {activeSearch ? <Pagination
                             itemsPerPage={itemsPerPage}
                             totalItems={items.length}
                             setCurrentPage={setCurrentPage}
+                            currentPage={currentPage}
                             setIsLoading={setIsLoading}
-                        />
+                        /> : null}
+
                     </React.Fragment>
                 }
             </div>

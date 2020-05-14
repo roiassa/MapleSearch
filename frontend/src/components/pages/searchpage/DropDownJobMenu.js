@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import dropDownJobs from '../../../helpers/dropDownJobs'
@@ -9,6 +9,7 @@ function DropDown(props) {
     const handleSelect = (value) => {
         searchJobsApi(props.setItems, value, props.isCash)
         props.setIsLoading(!props.isLoading)
+        props.setActiveSearch(true)
     }
 
     return (
@@ -18,7 +19,6 @@ function DropDown(props) {
                     return <Dropdown.Item eventKey={job.value} key={index}>{job.name}</Dropdown.Item>
                 })}
             </DropdownButton>{' '}
-
         </React.Fragment>
     )
 }
