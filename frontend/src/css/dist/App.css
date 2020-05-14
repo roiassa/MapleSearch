@@ -235,7 +235,7 @@ button:hover {
 .wrapper .pages-window .items-list {
   width: 100%;
   overflow: auto;
-  overflow-x: auto;
+  overflow-x: hidden;
   border-radius: 0px 0px 0px 20px;
 }
 .wrapper .pages-window .items-list .item {
@@ -248,7 +248,7 @@ button:hover {
   width: 100%;
 }
 .wrapper .pages-window .items-list .item .item-name {
-  color: #455a64;
+  color: #f6e27f;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -279,6 +279,22 @@ button:hover {
 }
 .wrapper .pages-window .items-list .item .item-img img {
   height: 25%;
+}
+.wrapper .pages-window .pages-line {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .pages-window .pages-line .page-link {
+  color: white;
+  background-color: #f4511e;
+  border-color: #49516f;
+}
+.wrapper .pages-window .pages-line .page-link:hover {
+  cursor: pointer;
+  background-color: #fb8c00;
 }
 
 /*# sourceMappingURL=App.css.map */
