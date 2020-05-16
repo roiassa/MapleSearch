@@ -13,7 +13,7 @@ function LoadingPage(props) {
             {props.isLoading ? <div className="loading-page">
                 <span>Loading...</span>
                 <Spinner animation="grow" variant="primary" />
-                <img src={pinkBean}></img>
+                <img src={pinkBean} alt="):"></img>
             </div> : null}
         </React.Fragment>
     )

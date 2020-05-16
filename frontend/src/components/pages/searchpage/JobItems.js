@@ -21,7 +21,7 @@ function JobItems(props) {
                         <p>Category: {item.typeInfo.subCategory}</p>
                     </div>
                     <div className="item-img">
-                        <img src={`https://maplestory.io/api/gms/213/item/${item.id}/icon`}></img>
+                        <img src={`https://maplestory.io/api/gms/213/item/${item.id}/icon`} alt="):"></img>
                     </div>
                 </div>
             })
