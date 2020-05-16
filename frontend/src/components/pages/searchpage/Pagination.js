@@ -35,7 +35,7 @@ function Pagination(props) {
                         :
                         <React.Fragment>
                             <li href="/search" className="page-item">
-                                <a onClick={() => handleClick(paginate, 1)} className="page-link">
+                                <a href='#!' onClick={() => handleClick(paginate, 1)} className="page-link">
                                     1
                             </a>
                             </li>
@@ -45,7 +45,7 @@ function Pagination(props) {
 
                     {pageNumbers.slice(props.currentPage - 1, props.currentPage + 8).map(number => {
                         return <li key={number} href="/search" className="page-item">
-                            <a onClick={() => handleClick(paginate, number)} className="page-link">
+                            <a href='#!' onClick={() => handleClick(paginate, number)} className="page-link">
                                 {number}
                             </a>
                         </li>
@@ -56,7 +56,7 @@ function Pagination(props) {
                         <React.Fragment>
                             <span className="page-link">...</span>
                             <li href="/search" className="page-item">
-                                <a onClick={() => handleClick(paginate, Math.max.apply(null, pageNumbers))} className="page-link">
+                                <a href='#!' onClick={() => handleClick(paginate, Math.max.apply(null, pageNumbers))} className="page-link">
                                     {Math.max.apply(null, pageNumbers)}
                                 </a>
                             </li>
