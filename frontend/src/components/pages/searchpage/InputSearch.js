@@ -16,9 +16,9 @@ function InputSearch(props) {
     }, [search])
 
     return (
-        <React.Fragment>
+        <div className="input-search-div">
             <input type="text" placeholder="Search for an item" onChange={(e) => setSearch(e.target.value)}></input>
-        </React.Fragment>
+        </div>
     )
 }
 export default InputSearch

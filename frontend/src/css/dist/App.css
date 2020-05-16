@@ -191,6 +191,19 @@ button:hover {
   padding: 50px;
   border-bottom: 7px solid white;
 }
+.wrapper .pages-window .search-options .input-search-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: 250px;
+}
+.wrapper .pages-window .search-options .input-search-div input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px 20px 20px 20px;
+  border: none;
+  outline: none;
+}
 .wrapper .pages-window .search-options .cash-btn-div {
   width: 100%;
   display: flex;
