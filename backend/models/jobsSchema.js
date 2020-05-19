@@ -5,7 +5,8 @@ const JobSchema = new Schema({
     path: String,
     title: String,
     image: String,
-    overview: String
+    overview: String,
+    isCash: Boolean
 });
 
 const Job = mongoose.model('job', JobSchema);
