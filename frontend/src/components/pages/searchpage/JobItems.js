@@ -8,6 +8,8 @@ function JobItems(props) {
     const indexOfFirstItem = indexOfLastItem - props.itemsPerPage
     const currentItems = props.items.slice(indexOfFirstItem, indexOfLastItem)
 
+    console.log(currentItems)
+
     return (
         <React.Fragment>
             {currentItems.map((item, index) => {

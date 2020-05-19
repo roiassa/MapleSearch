@@ -6,7 +6,8 @@ const ItemSchema = new Schema({
     requiredJobs: String,
     requiredLevels: String,
     category: String,
-    image: String
+    image: String,
+    isCash: Boolean
 });
 
 const Item = mongoose.model('item', ItemSchema);
