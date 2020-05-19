@@ -17,6 +17,7 @@ connect()
 app.use('/uploads', express.static('uploads'))
 app.use(bodyParser.json());
 app.use('/api', require('./routes/jobs'));
+app.use('/api', require('./routes/items'));
 
 app.use(function (err, req, res, next) {
     res.status(422).send({ error: err.message })
