@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Job = require('../models/jobsSchema')
+const {getJobs, addAJob} = require('../services/jobs-services')
 const multer = require('multer')
 
 const storage = multer.diskStorage({
@@ -31,7 +31,8 @@ const upload = multer({
 
 
 router.get('/jobs', function(req, res, next){
-    Job.find({}).then(function(jobs){
+    getJobs()
+    .then(function(jobs){
         res.send(jobs)
     })
     .catch(next)
@@ -39,14 +40,13 @@ router.get('/jobs', function(req, res, next){
 
 
 router.post('/jobs', upload.single('jobImage'), function(req, res, next) {
-    console.log(req.file.path)
-    Job.create({
-        path: req.body.path,
-        title: req.body.title,
-        image: req.file.path,
-        overview: req.body.overview
-    }).then(function(job){
-        res.send(job)
+    addAJob(
+        req.body.path,
+        req.body.title,
+        req.file.path,
+        req.body.overview)
+        .then(function(job){
+            res.send(job)
     })
     .catch(next)
 })
