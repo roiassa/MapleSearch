@@ -1,6 +1,6 @@
 const dropDownJobs = [
     {
-        name: "Begginer",
+        name: "Beginner",
         value: "0"
     },
     {
