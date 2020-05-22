@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import BackToAllItemsSearch from './BackToAllItemsSearch'
 import DropdownJobMenu from './DropDownJobMenu'
 import InputSearch from './InputSearch'
 import IsCashButton from './IsCashButton'
@@ -26,6 +27,14 @@ function SearchPage() {
     return (
         <React.Fragment>
             <div className='search-options'>
+                {activePerJobSearch ?
+                    <BackToAllItemsSearch 
+                    setActivePerJobSearch={setActivePerJobSearch}
+                    />
+                    :
+                    null
+                }
+
                 <DropdownJobMenu
                     setItems={setItems}
                     isCash={isCash}
@@ -73,6 +82,7 @@ function SearchPage() {
                             :
                             null
                         }
+
                         {activePerJobSearch && !inputActiveSearch ?
                             <JobItems
                                 items={items}
@@ -82,6 +92,7 @@ function SearchPage() {
                             :
                             null
                         }
+
                         {inputActiveSearch ?
                             <FilteredItems
                                 filteredItems={filteredItems}
@@ -91,6 +102,7 @@ function SearchPage() {
                             :
                             null
                         }
+
                         {
                             <Pagination
                                 itemsPerPage={itemsPerPage}
