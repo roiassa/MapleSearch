@@ -187,15 +187,31 @@ button:hover {
 }
 .wrapper .pages-window .search-options {
   width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
-  padding: 50px;
+  align-items: center;
+  justify-content: center;
   border-bottom: 7px solid white;
 }
+.wrapper .pages-window .search-options .back-btn-div button {
+  height: 30px;
+  width: 150px;
+  background-color: #f4511e;
+  color: white;
+  border: none;
+  border-radius: 30px 30px 30px 30px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.wrapper .pages-window .search-options .back-btn-div button:hover {
+  background-color: #fb8c00;
+}
 .wrapper .pages-window .search-options .input-search-div {
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: center;
-  padding-left: 250px;
 }
 .wrapper .pages-window .search-options .input-search-div input {
   width: 550px;
@@ -203,9 +219,10 @@ button:hover {
   border-radius: 20px 20px 20px 20px;
   border: none;
   outline: none;
+  margin-left: 100px;
 }
 .wrapper .pages-window .search-options .cash-btn-div {
-  width: 100%;
+  width: 20%;
   display: flex;
   justify-content: flex-end;
 }
@@ -217,6 +234,9 @@ button:hover {
   border-radius: 50px 50px 50px 50px;
   padding: 10px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.wrapper .pages-window .search-options .cash-btn-div .no-cash:hover, .wrapper .pages-window .search-options .cash-btn-div .yes-cash:hover {
+  background-color: #218bfc;
 }
 .wrapper .pages-window .search-options .cash-btn-div .yes-cash {
   background-color: #88d18a;
