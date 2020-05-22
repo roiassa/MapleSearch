@@ -4,16 +4,20 @@ import React from 'react'
 function Pagination(props) {
     const pageNumbers = [];
 
-    if (props.inputActiveSearch === false) {
-        for (let i = 1; i <= Math.ceil(props.totalItems / props.itemsPerPage); i++) {
+    if (!props.inputActiveSearch && props.activePerJobSearch) {
+        for (let i = 1; i <= Math.ceil(props.totalJobItems / props.itemsPerPage); i++) {
             pageNumbers.push(i)
         }
-    } else {
+    } else if (props.inputActiveSearch === false && props.activePerJobSearch === false) {
+        for (let i = 1; i <= Math.ceil(props.totalAllItems / props.itemsPerPage); i++) {
+            pageNumbers.push(i)
+        }
+    } 
+    else {
         for (let i = 1; i <= Math.ceil(props.totalFilteredItems / props.itemsPerPage); i++) {
             pageNumbers.push(i)
         }
     }
-
 
     //Change page
     const paginate = (pageNumber) => props.setCurrentPage(pageNumber)
