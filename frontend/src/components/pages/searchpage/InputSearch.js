@@ -1,23 +1,28 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 function InputSearch(props) {
 
-    const [search, setSearch] = useState('')
-
     useEffect(() => {
-        if (search === '') {
+
+        props.setCurrentPage(1)
+
+        if (props.search === '') {
             props.setInputActiveSearch(false)
         } else {
             props.setInputActiveSearch(true)
         }
 
-        props.setFilteredItems(props.items)
-        props.setFilteredItems(props.items.filter(item => { return item.name.toLowerCase().includes(search.toLowerCase()) }))
-    }, [search])
+        if (props.activePerJobSearch === true) {
+            props.setFilteredItems(props.items.filter(item => { return typeof item.name === 'undefined' ? console.log(item) : item.name.toLowerCase().includes(props.search.toLowerCase()) }))
+        } else {
+            props.setFilteredItems(props.allItems.filter(item => { return typeof item.name === 'undefined' ? console.log(item) : item.name.toLowerCase().includes(props.search.toLowerCase()) }))
+        }
+
+    }, [props.search])
 
     return (
         <div className="input-search-div">
-            <input type="text" placeholder="Search for an item" onChange={(e) => setSearch(e.target.value)}></input>
+            <input type="text" placeholder="Search for an item" onChange={(e) => props.setSearch(e.target.value)}></input>
         </div>
     )
 }
