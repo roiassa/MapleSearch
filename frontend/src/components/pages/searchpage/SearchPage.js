@@ -60,6 +60,7 @@ function SearchPage() {
                 <IsCashButton
                     isCash={isCash}
                     setIsCash={setIsCash}
+                    setCurrentPage={setCurrentPage}
                 />
             </div>
 
