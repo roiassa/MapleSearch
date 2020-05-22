@@ -1,14 +1,9 @@
 const Item = require('../models/itemsSchema');
 const axios = require('axios');
 
-const jobIds = [0, 1, 2, 8, 4, 16]
-
-jobIds.forEach(jobId => {
-    jobDataToDb(jobId)
-})
-
 function jobDataToDb(id) {
     const items = []
+    
     const url = `https://maplestory.io/api/gms/213/item/list?jobFilter=${id}`
     axios.get(url)
         .then(res => {
@@ -26,7 +21,7 @@ function jobDataToDb(id) {
             })
         })
         .then(() => {
-            Item.insertMany(items)
+            // Item.insertMany(items)
         })
         .catch(err => {
             if (err.respone === undefined) {
@@ -37,3 +32,9 @@ function jobDataToDb(id) {
             }
         })
 }
+
+// Item.deleteMany({}, function (err) {
+//     if (err) return handleError(err);
+//   });
+
+module.exports = jobDataToDb
