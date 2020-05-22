@@ -1,6 +1,14 @@
 const Item = require('../models/itemsSchema');
 const axios = require('axios');
 
+function getJobData() {
+    const jobIds = [0, 1, 2, 8, 4, 16]
+
+    jobIds.forEach(jobId => {
+        jobDataToDb(jobId)
+    })
+}
+
 function jobDataToDb(id) {
     const items = []
     
@@ -18,6 +26,7 @@ function jobDataToDb(id) {
                     isCash: item.isCash
                 }
                 items.push(obj)
+                
             })
         })
         .then(() => {
@@ -37,4 +46,4 @@ function jobDataToDb(id) {
 //     if (err) return handleError(err);
 //   });
 
-module.exports = jobDataToDb
+module.exports = getJobData

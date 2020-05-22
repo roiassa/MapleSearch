@@ -1,14 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const Item = require('../models/itemsSchema');
-const jobDataToDb = require('../helpers/jobData')
+const getJobData = require('../helpers/jobData')
 
-const jobIds = [0, 1, 2, 8, 4, 16]
-
-jobIds.forEach(jobId => {
-    jobDataToDb(jobId)
-})
-
+getJobData()
 
 router.get('/items/:isCash', function (req, res, next) {
     Item.find({isCash: req.params.isCash})
