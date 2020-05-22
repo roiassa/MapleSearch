@@ -7,7 +7,7 @@ import LoadingPage from '../LoadingPage'
 import AllItems from './AllItems'
 import JobItems from './JobItems'
 import FilteredItems from './FilteredItems'
-import Pagination from './Pagination'
+import Pagination from './pagination/Pagination'
 
 
 function SearchPage() {
