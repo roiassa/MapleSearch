@@ -8,8 +8,6 @@ function JobItems(props) {
     const indexOfFirstItem = indexOfLastItem - props.itemsPerPage
     const currentItems = props.items.slice(indexOfFirstItem, indexOfLastItem)
 
-    console.log(currentItems)
-
     return (
         <React.Fragment>
             {currentItems.map((item, index) => {
@@ -20,10 +18,10 @@ function JobItems(props) {
                     <div className='item-details'>
                         <p>Required Jobs: {item.requiredJobs}</p>
                         <p>Required Level: {item.requiredLevel}</p>
-                        <p>Category: {item.typeInfo.subCategory}</p>
+                        <p>Category: {item.category}</p>
                     </div>
                     <div className="item-img">
-                        <img src={`https://maplestory.io/api/gms/213/item/${item.id}/icon`} alt="):"></img>
+                        <img src={item.image} alt="):"></img>
                     </div>
                 </div>
             })
