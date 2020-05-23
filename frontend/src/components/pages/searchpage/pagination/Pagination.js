@@ -2,9 +2,11 @@ import React from 'react'
 import FirstPageLogic from './FirstPageLogic'
 import AllPageLogic from './AllPageLogic'
 import LastPageLogic from './LastPageLogic'
+import InputPageNumber from './InputPageNumber'
 
 
 function Pagination(props) {
+
     const pageNumbers = [];
 
     if (!props.inputActiveSearch && props.activePerJobSearch) {
@@ -58,7 +60,11 @@ function Pagination(props) {
                     paginate={paginate}
                     pageNumbers={pageNumbers}
                     />
-        
+                    
+                    <InputPageNumber 
+                    setCurrentPage={props.setCurrentPage}                    
+                   />
+                
                 </ul>
             </nav>
         </div>
