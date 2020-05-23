@@ -30,6 +30,7 @@ function SearchPage() {
                 {activePerJobSearch ?
                     <BackToAllItemsSearch 
                     setActivePerJobSearch={setActivePerJobSearch}
+                    setCurrentPage={setCurrentPage}
                     />
                     :
                     null
