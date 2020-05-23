@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-const { mongoUri } = require('../config/config')
 
+const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/maplesearch'
 
 module.exports = function connect() {
    return mongoose.connect(mongoUri, {
