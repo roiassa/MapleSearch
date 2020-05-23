@@ -1,7 +1,9 @@
 const express = require('express');
+require('dotenv').config({path: './config/.env'})
 const bodyParser = require('body-parser');
 const connect = require('./db/mongodb')
-const { port } = require('./config/config')
+
+const port = process.env.PORT || 3000
 
 const app = express();
 
