@@ -1,8 +1,8 @@
 import React from 'react'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
-import dropDownJobs from '../../../helpers/dropDownJobs'
-import searchJobsApi from '../../../helpers/apicalls/searchJobsApi'
+import dropDownJobs from '../../../../helpers/dropDownJobs'
+import searchJobsApi from '../../../../helpers/apicalls/searchJobsApi'
 
 function DropDown(props) {
     

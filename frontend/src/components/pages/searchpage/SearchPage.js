@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
-import BackToAllItemsSearch from './BackToAllItemsSearch'
-import DropdownJobMenu from './DropDownJobMenu'
-import InputSearch from './InputSearch'
-import IsCashButton from './IsCashButton'
+import SearchOptions from './search-options/SearchOptions'
 import LoadingPage from '../LoadingPage'
 import AllItems from './AllItems'
 import JobItems from './JobItems'
@@ -26,45 +23,23 @@ function SearchPage() {
 
     return (
         <React.Fragment>
-            <div className='search-options'>
-                {activePerJobSearch ?
-                    <BackToAllItemsSearch 
-                    setActivePerJobSearch={setActivePerJobSearch}
-                    setCurrentPage={setCurrentPage}
-                    />
-                    :
-                    null
-                }
-
-                <DropdownJobMenu
-                    setItems={setItems}
-                    isCash={isCash}
-                    isLoading={isLoading}
-                    setActivePerJobSearch={setActivePerJobSearch}
-                    setIsLoading={setIsLoading}
-                    setCurrentPage={setCurrentPage}
-                    setSearch={setSearch}
-                />
-
-                <InputSearch
-                    search={search}
-                    setSearch={setSearch}
-                    allItems={allItems}
-                    items={items}
-                    filteredItems={filteredItems}
-                    setFilteredItems={setFilteredItems}
-                    setInputActiveSearch={setInputActiveSearch}
-                    activePerJobSearch={activePerJobSearch}
-                    setCurrentPage={setCurrentPage}
-                />
-
-                <IsCashButton
-                    isCash={isCash}
-                    setIsCash={setIsCash}
-                    setCurrentPage={setCurrentPage}
-                />
-            </div>
-
+            <SearchOptions
+                isCash={isCash}
+                setIsCash={setIsCash}
+                search={search}
+                setSearch={setSearch}
+                allItems={allItems}
+                items={items}
+                setItems={setItems}
+                filteredItems={filteredItems}
+                setFilteredItems={setFilteredItems}
+                isLoading={isLoading}
+                setIsLoading={setIsLoading}
+                activePerJobSearch={activePerJobSearch}
+                setActivePerJobSearch={setActivePerJobSearch}
+                setInputActiveSearch={setInputActiveSearch}
+                setCurrentPage={setCurrentPage}
+            />
             <div className='items-list'>
                 {isLoading ?
                     <LoadingPage
