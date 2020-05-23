@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-import getAllItems from '../../../helpers/apicalls/allItemsApi'
+import getAllItems from '../../../../helpers/apicalls/allItemsApi'
+
 
 function AllItems(props) {
 
