@@ -3,11 +3,15 @@ import React from 'react'
 function InputPageNumber(props) {
 
     const handleChange = (e) => {
-        
         if(e.target.value === '') {
             props.setCurrentPage(1)
-        } else {
-            props.setCurrentPage(parseInt(e.target.value)) 
+        } 
+        else if (isNaN(e.target.value)) {
+            alert('Only numbers allowed!')
+        }
+        
+        else {
+            props.setCurrentPage(parseInt(e.target.value))
         }
     }
 
