@@ -1,16 +1,20 @@
-import React from 'react'
+import React, {useEffect, useCallback} from 'react'
+import getCurrentPageItems from '../../../../helpers/getCurrentPageItems'
 
 
 function JobItems(props) {
 
-    //Get current items
-    const indexOfLastItem = props.currentPage * props.itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - props.itemsPerPage
-    const currentItems = props.items.slice(indexOfFirstItem, indexOfLastItem)
+    const getCurrentPageItemsMemo = useCallback(() => {
+        getCurrentPageItems(props.currentPage, props.itemsPerPage, props.items, props.setCurrentItems)
+    }, [props.currentPage, props.itemsPerPage, props.items, props.setCurrentItems])
+
+    useEffect(() => {
+        getCurrentPageItemsMemo()
+    }, [getCurrentPageItemsMemo])
 
     return (
         <React.Fragment>
-            {currentItems.map((item, index) => {
+            {props.currentItems.map((item, index) => {
                 return <div className='item' key={index}>
                     <div className='item-name'>
                         <span>{item.name}</span>

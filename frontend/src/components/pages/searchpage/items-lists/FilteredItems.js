@@ -1,15 +1,20 @@
-import React from 'react'
+import React, {useEffect, useCallback} from 'react'
+import getCurrentPageItems from '../../../../helpers/getCurrentPageItems'
+
 
 function FilteredItems(props) {
 
-    //Get current items
-    const indexOfLastItem = props.currentPage * props.itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - props.itemsPerPage
-    const currentFilteredItems = props.filteredItems.slice(indexOfFirstItem, indexOfLastItem)
+    const getCurrentPageItemsMemo = useCallback(() => {
+        getCurrentPageItems(props.currentPage, props.itemsPerPage, props.filteredItems, props.setCurrentItems)
+    }, [props.currentPage, props.itemsPerPage, props.filteredItems, props.setCurrentItems])
+
+    useEffect(() => {
+        getCurrentPageItemsMemo()
+    }, [getCurrentPageItemsMemo])
 
     return (
         <React.Fragment>
-            {currentFilteredItems.map((item, index) => {
+            {props.currentItems.map((item, index) => {
                 return <div className='item' key={index}>
                     <div className='item-name'>
                         <span>{item.name}</span>
