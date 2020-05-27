@@ -1,13 +1,16 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Spinner from 'react-bootstrap/Spinner'
 import pinkBean from '../../assets/img-src/Pink Bean.png'
 
 function LoadingPage(props) {
-    if (props.isLoading) {
-        setTimeout(() => {
-            props.setIsLoading(false)
-        }, 3000)
-    }
+    useEffect(() => {
+        if (props.isLoading) {
+            setTimeout(() => {
+                props.setIsLoading(false)
+            }, 3000)
+        }
+    })
+    
     return (
         <React.Fragment>
             {props.isLoading ? <div className="loading-page">
