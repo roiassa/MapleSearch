@@ -33,7 +33,7 @@ function ItemsLists(props) {
 
                     {props.activePerJobSearch && !props.inputActiveSearch ?
                         <JobItems
-                            items={props.items}
+                            jobItems={props.jobItems}
                             itemsPerPage={props.itemsPerPage}
                             currentPage={props.currentPage}
                             currentItems={props.currentItems}
@@ -59,7 +59,7 @@ function ItemsLists(props) {
                         <Pagination
                             itemsPerPage={props.itemsPerPage}
                             totalAllItems={props.allItems.length}
-                            totalJobItems={props.items.length}
+                            totalJobItems={props.jobItems.length}
                             totalFilteredItems={props.filteredItems.length}
                             setCurrentPage={props.setCurrentPage}
                             currentPage={props.currentPage}

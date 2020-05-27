@@ -6,7 +6,7 @@ import ItemsLists from './items-lists/ItemsLists'
 function SearchPage() {
 
     const [allItems, setAllItems] = useState([])
-    const [items, setItems] = useState([])
+    const [jobItems, setJobItems] = useState([])
     const [filteredItems, setFilteredItems] = useState([])
     const [search, setSearch] = useState('')
     const [isCash, setIsCash] = useState(false)
@@ -25,8 +25,8 @@ function SearchPage() {
                 search={search}
                 setSearch={setSearch}
                 allItems={allItems}
-                items={items}
-                setItems={setItems}
+                jobItems={jobItems}
+                setJobItems={setJobItems}
                 filteredItems={filteredItems}
                 setFilteredItems={setFilteredItems}
                 isLoading={isLoading}
@@ -42,10 +42,10 @@ function SearchPage() {
                 setIsLoading={setIsLoading}
                 allItems={allItems}
                 setAllItems={setAllItems}
-                items={items}
+                jobItems={jobItems}
                 filteredItems={filteredItems}
                 totalAllItems={allItems.length}
-                totalJobItems={items.length}
+                totalJobItems={jobItems.length}
                 totalFilteredItems={filteredItems.length}
                 itemsPerPage={itemsPerPage}
                 currentPage={currentPage}

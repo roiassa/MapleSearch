@@ -5,8 +5,8 @@ import getCurrentPageItems from '../../../../helpers/getCurrentPageItems'
 function JobItems(props) {
 
     const getCurrentPageItemsMemo = useCallback(() => {
-        getCurrentPageItems(props.currentPage, props.itemsPerPage, props.items, props.setCurrentItems)
-    }, [props.currentPage, props.itemsPerPage, props.items, props.setCurrentItems])
+        getCurrentPageItems(props.currentPage, props.itemsPerPage, props.jobItems, props.setCurrentItems)
+    }, [props.currentPage, props.itemsPerPage, props.jobItems, props.setCurrentItems])
 
     useEffect(() => {
         getCurrentPageItemsMemo()

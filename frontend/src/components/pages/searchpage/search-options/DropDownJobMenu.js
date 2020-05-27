@@ -7,7 +7,7 @@ import searchJobsApi from '../../../../helpers/apicalls/searchJobsApi'
 function DropDown(props) {
     
     const handleSelect = (value) => {
-        searchJobsApi(props.setItems, value, props.isCash)
+        searchJobsApi(props.setJobItems, value, props.isCash)
         props.setIsLoading(!props.isLoading)
         props.setActivePerJobSearch(true)
         props.setCurrentPage(1)

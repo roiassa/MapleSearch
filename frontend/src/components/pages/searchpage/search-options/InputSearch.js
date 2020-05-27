@@ -13,7 +13,7 @@ function InputSearch(props) {
         }
 
         if (props.activePerJobSearch === true) {
-            props.setFilteredItems(props.items.filter(item => { return item.name.toLowerCase().includes(props.search.toLowerCase()) }))
+            props.setFilteredItems(props.jobItems.filter(item => { return item.name.toLowerCase().includes(props.search.toLowerCase()) }))
         } else {
             props.setFilteredItems(props.allItems.filter(item => { return item.name.toLowerCase().includes(props.search.toLowerCase()) }))
         }

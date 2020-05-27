@@ -18,7 +18,7 @@ function SearchOptions(props) {
                 }
 
                 <DropdownJobMenu
-                    setItems={props.setItems}
+                    setJobItems={props.setJobItems}
                     isCash={props.isCash}
                     isLoading={props.isLoading}
                     setActivePerJobSearch={props.setActivePerJobSearch}
@@ -31,7 +31,7 @@ function SearchOptions(props) {
                     search={props.search}
                     setSearch={props.setSearch}
                     allItems={props.allItems}
-                    items={props.items}
+                    jobItems={props.jobItems}
                     filteredItems={props.filteredItems}
                     setFilteredItems={props.setFilteredItems}
                     setInputActiveSearch={props.setInputActiveSearch}
