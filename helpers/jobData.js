@@ -30,7 +30,7 @@ function jobDataToDb(id) {
             })
         })
         .then(() => {
-            Item.updateMany(items)
+            Item.insertMany(items)
         })
         .catch(err => {
             if (err.respone === undefined) {
