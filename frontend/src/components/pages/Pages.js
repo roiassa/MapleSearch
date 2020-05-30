@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import jobGet from '../../helpers/apicalls/jobsApi.js'
 import HomePage from './HomePage'
+import jobGet from '../../helpers/apicalls/jobsApi'
 import JobPages from './JobPages'
 import SearchPage from './searchpage/SearchPage'
 import { BrowserRouter as Router, Route, } from 'react-router-dom'
