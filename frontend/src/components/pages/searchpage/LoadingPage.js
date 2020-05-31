@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import Spinner from 'react-bootstrap/Spinner'
-import pinkBean from '../../assets/img-src/Pink Bean.png'
+import pinkBean from '../../../assets/img-src/Pink Bean.png'
 
 function LoadingPage(props) {
     useEffect(() => {
@@ -9,15 +9,15 @@ function LoadingPage(props) {
                 props.setIsLoading(false)
             }, 3000)
         }
-    })
+    }, [])
     
     return (
         <React.Fragment>
-            {props.isLoading ? <div className="loading-page">
+            <div className="loading-page">
                 <span>Loading...</span>
                 <Spinner animation="grow" variant="primary" />
                 <img src={pinkBean} alt="):"></img>
-            </div> : null}
+            </div>
         </React.Fragment>
     )
 }

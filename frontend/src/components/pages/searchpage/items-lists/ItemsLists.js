@@ -1,5 +1,5 @@
-import React from 'react'
-import LoadingPage from '../../LoadingPage'
+import React, { useEffect } from 'react'
+import LoadingPage from '../LoadingPage'
 import AllItems from './AllItems'
 import JobItems from './JobItems'
 import FilteredItems from './FilteredItems'
@@ -7,6 +7,10 @@ import Pagination from '../pagination/Pagination'
 
 
 function ItemsLists(props) {
+
+    useEffect(() => {
+        props.setIsLoading(true)
+    }, [])
 
     return (
         <div className='items-list'>
