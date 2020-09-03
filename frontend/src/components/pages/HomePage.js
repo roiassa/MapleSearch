@@ -13,7 +13,7 @@ function HomePage() {
             <div className="overview">
                 <p>MapleSearch will help you find every item that exists in the game to your needs.
                 Whether it's just for a specific job, such as: Warrior, Magician, etc... Or even if you'd like to see cash items as well or not!
-                You could also find other helpful things about the MapleStory world around here.
+                You could also find other helpful things about the MapleStory world around here.<br />
                 To begin, press on that vicious Balrog beneath!
                 </p>
             </div>

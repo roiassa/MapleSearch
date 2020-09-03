@@ -4,7 +4,7 @@ function InputSearch(props) {
 
     useEffect(() => {
 
-        props.setCurrentPage(1)
+        props.setCurrentPage(0)
 
         if (props.search === '') {
             props.setInputActiveSearch(false)
@@ -27,3 +27,5 @@ function InputSearch(props) {
     )
 }
 export default InputSearch
+
+

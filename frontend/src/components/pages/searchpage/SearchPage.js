@@ -11,12 +11,13 @@ function SearchPage() {
     const [search, setSearch] = useState('')
     const [isCash, setIsCash] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
-    const [currentPage, setCurrentPage] = useState(1)
+    const [currentPage, setCurrentPage] = useState(0)
     const [currentItems, setCurrentItems] = useState([])
     const [itemsPerPage] = useState(10)
     const [activePerJobSearch, setActivePerJobSearch] = useState(false)
     const [inputActiveSearch, setInputActiveSearch] = useState(false)
 
+    
     return (
         <React.Fragment>
             <SearchOptions

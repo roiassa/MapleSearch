@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState,useEffect } from 'react'
 import LoadingPage from '../LoadingPage'
 import AllItems from './AllItems'
 import JobItems from './JobItems'
@@ -7,6 +7,8 @@ import Pagination from '../pagination/Pagination'
 
 
 function ItemsLists(props) {
+
+    const [pageNumbers, setPageNumbers] = useState([])
 
     useEffect(() => {
         props.setIsLoading(true)
@@ -25,6 +27,7 @@ function ItemsLists(props) {
                         <AllItems
                             allItems={props.allItems}
                             setAllItems={props.setAllItems}
+                            setPageNumbers={setPageNumbers}
                             itemsPerPage={props.itemsPerPage}
                             currentPage={props.currentPage}
                             currentItems={props.currentItems}
@@ -62,6 +65,12 @@ function ItemsLists(props) {
                     {
                         <Pagination
                             itemsPerPage={props.itemsPerPage}
+                            allItems={props.allItems}
+                            currentItems={props.currentItems}
+                            setAllItems={props.setAllItems}
+                            setPageNumbers={setPageNumbers}
+                            pageNumbers={pageNumbers}
+                            isCash={props.isCash}
                             totalAllItems={props.allItems.length}
                             totalJobItems={props.jobItems.length}
                             totalFilteredItems={props.filteredItems.length}

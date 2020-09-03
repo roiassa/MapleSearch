@@ -94,7 +94,8 @@ function jobDataToDb(id) {
         })
         .catch(err => {
             if (err.respone === undefined) {
-                alert("Api is down")
+                console.log("Api is down")
+                throw err;
             }
             else if (err.reponse.status === 404) {
                 console.log(err)

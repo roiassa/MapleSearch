@@ -4,7 +4,7 @@ function InputPageNumber(props) {
 
     const handleChange = (e) => {
         if(e.target.value === '') {
-            props.setCurrentPage(1)
+            props.setCurrentPage(0)
         } 
         else if (isNaN(e.target.value)) {
             alert('Only numbers allowed!')

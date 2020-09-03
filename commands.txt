@@ -1,3 +1,5 @@
-export PORT=4000 && nodemon server
+export PORT=4001 && nodemon server
 
 cd frontend && npm start
+
+npx sass frontend/src/css/sassFolder/main.scss frontend/src/css/dist/App.css --watch

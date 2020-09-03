@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import Spinner from 'react-bootstrap/Spinner'
 import pinkBean from '../../../assets/img-src/Pink Bean.png'
 
@@ -10,7 +10,7 @@ function LoadingPage(props) {
             }, 3000)
         }
     }, [])
-    
+
     return (
         <React.Fragment>
             <div className="loading-page">

@@ -7,7 +7,7 @@ function IsCashButton(props) {
     const handleClick = () => {
         props.setIsCash(!props.isCash)
         setBtnColor(!btnColor)
-        props.setCurrentPage(1)
+        props.setCurrentPage(0)
     }
 
     let colorOfButton = btnColor ? "yes-cash" : "no-cash"
