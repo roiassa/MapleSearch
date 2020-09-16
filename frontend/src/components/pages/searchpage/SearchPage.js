@@ -5,18 +5,15 @@ import ItemsLists from './items-lists/ItemsLists'
 
 function SearchPage() {
 
-    const [allItems, setAllItems] = useState([])
-    const [jobItems, setJobItems] = useState([])
-    const [filteredItems, setFilteredItems] = useState([])
+    const [currentJob, setCurrentJob] = useState('')
     const [search, setSearch] = useState('')
     const [isCash, setIsCash] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(0)
+    const [pageNumbers, setPageNumbers] = useState([])
     const [currentItems, setCurrentItems] = useState([])
-    const [itemsPerPage] = useState(10)
     const [activePerJobSearch, setActivePerJobSearch] = useState(false)
     const [inputActiveSearch, setInputActiveSearch] = useState(false)
-
     
     return (
         <React.Fragment>
@@ -25,32 +22,30 @@ function SearchPage() {
                 setIsCash={setIsCash}
                 search={search}
                 setSearch={setSearch}
-                allItems={allItems}
-                jobItems={jobItems}
-                setJobItems={setJobItems}
-                filteredItems={filteredItems}
-                setFilteredItems={setFilteredItems}
+                currentItems={currentItems}
+                setCurrentItems={setCurrentItems}
+                currentJob={currentJob}
+                setCurrentJob={setCurrentJob}
                 isLoading={isLoading}
                 setIsLoading={setIsLoading}
                 activePerJobSearch={activePerJobSearch}
                 setActivePerJobSearch={setActivePerJobSearch}
+                inputActiveSearch={inputActiveSearch}
                 setInputActiveSearch={setInputActiveSearch}
+                currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
+                pageNumbers={pageNumbers}
+                setPageNumbers={setPageNumbers}
             />
 
             <ItemsLists
                 isLoading={isLoading}
                 setIsLoading={setIsLoading}
-                allItems={allItems}
-                setAllItems={setAllItems}
-                jobItems={jobItems}
-                filteredItems={filteredItems}
-                totalAllItems={allItems.length}
-                totalJobItems={jobItems.length}
-                totalFilteredItems={filteredItems.length}
-                itemsPerPage={itemsPerPage}
+                currentJob={currentJob}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
+                pageNumbers={pageNumbers}
+                setPageNumbers={setPageNumbers}
                 currentItems={currentItems}
                 setCurrentItems={setCurrentItems}
                 isCash={isCash}

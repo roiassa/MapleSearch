@@ -5,6 +5,7 @@ function BackToAllItemsSearch(props) {
 
     const handleClick = () => {
         props.setActivePerJobSearch(false)
+        props.setInputActiveSearch(false)
         props.setCurrentPage(0)
         props.setSearch('')
     }

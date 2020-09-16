@@ -1,29 +1,24 @@
 import React, { useEffect, useCallback } from 'react'
 import getAllItems from '../../../../helpers/apicalls/allItemsApi'
-import getCurrentPageItems from '../../../../helpers/getCurrentPageItems'
 
 
 function AllItems(props) {
 
-
-
     //wrapping the functions in react's useCallback hook to avoid useEffect dependency warnings:
-    const getAllItemsMemo = useCallback(() => {
+    const setAllItems = useCallback(() => {
         getAllItems(props.isCash, props.setCurrentItems, props.currentPage, props.setPageNumbers)
-    }, [props.isCash, props.setAllItems])
-
-    // const getCurrentPageItemsMemo = useCallback(() => {
-    //     getCurrentPageItems(props.currentPage, props.itemsPerPage, props.allItems, props.setCurrentItems)
-    // }, [props.currentPage, props.itemsPerPage, props.allItems, props.setCurrentItems])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [props.isCash, props.setCurrentItems, props.setPageNumbers, props.currentPage])
 
     useEffect(() => {
-        getAllItemsMemo()
-    }, [getAllItemsMemo])
-
-    // useEffect(() => {
-    //     getCurrentPageItemsMemo()
-    // }, [getCurrentPageItemsMemo])
-
+        if(!props.currentItems) {
+            props.setIsLoading(true)
+        } else {
+            props.setIsLoading(false)
+        }
+        setAllItems()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [setAllItems])
 
     return (
         <React.Fragment>

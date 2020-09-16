@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React from 'react'
 import LoadingPage from '../LoadingPage'
 import AllItems from './AllItems'
 import JobItems from './JobItems'
@@ -8,12 +8,11 @@ import Pagination from '../pagination/Pagination'
 
 function ItemsLists(props) {
 
-    const [pageNumbers, setPageNumbers] = useState([])
-
-    useEffect(() => {
-        props.setIsLoading(true)
-    }, [])
-
+    // useEffect(() => {
+    //     props.setIsLoading(true)
+    // // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [])
+    
     return (
         <div className='items-list'>
             {props.isLoading ?
@@ -25,10 +24,9 @@ function ItemsLists(props) {
                 <React.Fragment>
                     {!props.activePerJobSearch && !props.inputActiveSearch ?
                         <AllItems
-                            allItems={props.allItems}
-                            setAllItems={props.setAllItems}
-                            setPageNumbers={setPageNumbers}
-                            itemsPerPage={props.itemsPerPage}
+                            isLoading={props.isLoading}
+                            setIsLoading={props.setIsLoading}
+                            setPageNumbers={props.setPageNumbers}
                             currentPage={props.currentPage}
                             currentItems={props.currentItems}
                             setCurrentItems={props.setCurrentItems}
@@ -40,11 +38,12 @@ function ItemsLists(props) {
 
                     {props.activePerJobSearch && !props.inputActiveSearch ?
                         <JobItems
-                            jobItems={props.jobItems}
-                            itemsPerPage={props.itemsPerPage}
+                            currentJob={props.currentJob}
                             currentPage={props.currentPage}
                             currentItems={props.currentItems}
                             setCurrentItems={props.setCurrentItems}
+                            setPageNumbers={props.setPageNumbers}
+                            isCash={props.isCash}
                         />
                         :
                         null
@@ -52,8 +51,6 @@ function ItemsLists(props) {
 
                     {props.inputActiveSearch ?
                         <FilteredItems
-                            filteredItems={props.filteredItems}
-                            itemsPerPage={props.itemsPerPage}
                             currentPage={props.currentPage}
                             currentItems={props.currentItems}
                             setCurrentItems={props.setCurrentItems}
@@ -64,16 +61,10 @@ function ItemsLists(props) {
 
                     {
                         <Pagination
-                            itemsPerPage={props.itemsPerPage}
-                            allItems={props.allItems}
                             currentItems={props.currentItems}
-                            setAllItems={props.setAllItems}
-                            setPageNumbers={setPageNumbers}
-                            pageNumbers={pageNumbers}
+                            setPageNumbers={props.setPageNumbers}
+                            pageNumbers={props.pageNumbers}
                             isCash={props.isCash}
-                            totalAllItems={props.allItems.length}
-                            totalJobItems={props.jobItems.length}
-                            totalFilteredItems={props.filteredItems.length}
                             setCurrentPage={props.setCurrentPage}
                             currentPage={props.currentPage}
                             setIsLoading={props.setIsLoading}

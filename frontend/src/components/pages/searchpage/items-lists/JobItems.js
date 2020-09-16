@@ -1,20 +1,21 @@
 import React, { useEffect, useCallback } from 'react'
-import getCurrentPageItems from '../../../../helpers/getCurrentPageItems'
+import searchJobsItemsGet from '../../../../helpers/apicalls/searchJobsItemsApi'
 
 
 function JobItems(props) {
 
-    const getCurrentPageItemsMemo = useCallback(() => {
-        getCurrentPageItems(props.currentPage, props.itemsPerPage, props.jobItems, props.setCurrentItems)
-    }, [props.currentPage, props.itemsPerPage, props.jobItems, props.setCurrentItems])
-
+    const setJobItems = useCallback(() => {
+        searchJobsItemsGet(props.setCurrentItems, props.currentJob, props.isCash, props.currentPage, props.setPageNumbers)
+    }, [props.currentJob, props.currentPage, props.isCash, props.setCurrentItems, props.setPageNumbers])
+    
     useEffect(() => {
-        getCurrentPageItemsMemo()
-    }, [getCurrentPageItemsMemo])
-
+        setJobItems()
+    }, [setJobItems])
+    
     return (
         <React.Fragment>
-            {props.currentItems.map((item, index) => {
+            {
+            props.currentItems.map((item, index) => {
                 return <div className='item' key={index}>
                     <div className="item-img-div">
                         <img src={item.image} alt="):"></img>

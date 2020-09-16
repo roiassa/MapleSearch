@@ -1,5 +1,5 @@
 const express = require('express');
-require('dotenv').config({path: './config/.env'});
+require('dotenv').config({ path: './config/.env' });
 const bodyParser = require('body-parser');
 const connect = require('./db/mongodb');
 const path = require('path');
@@ -23,7 +23,7 @@ app.use('/api', require('./routes/jobs'));
 app.use('/api', require('./routes/items'));
 
 // Serve static assets if in production:
-if(process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
     //Set a static folder:
     app.use(express.static('frontend/build'))
 

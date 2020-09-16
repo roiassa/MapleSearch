@@ -2,7 +2,7 @@ import React from 'react'
 
 
 function AllPageLogic(props) {
-
+    
     return (
         <React.Fragment>
             {props.currentPage === 0 ? props.pageNumbers.slice(props.currentPage, props.currentPage + 8).map(number => {

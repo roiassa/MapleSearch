@@ -2,18 +2,17 @@ import React from 'react'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import dropDownJobs from '../../../../helpers/dropDownJobs'
-import searchJobsGet from '../../../../helpers/apicalls/searchJobsApi'
 
 function DropDown(props) {
 
     const handleSelect = (value) => {
-        searchJobsGet(props.setJobItems, value, props.isCash)
-        props.setIsLoading(!props.isLoading)
+        props.setCurrentJob(value)
+        // props.setIsLoading(!props.isLoading)
+        props.setInputActiveSearch(false)
         props.setActivePerJobSearch(true)
-        props.setCurrentPage(1)
+        props.setCurrentPage(0)
         props.setSearch('')
     }
-
 
     return (
         <React.Fragment>
